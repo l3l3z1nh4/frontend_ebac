@@ -1,0 +1,131 @@
+/*[azul: #485494 | bege claro: #F2F0EB | bege escuro: #E8E3DD]*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box ;
+    }
+
+    body {
+        background-color: #F2F0EB ;
+        color: #485494 ;
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 16px 0;
+        border-bottom:  2px solid #485494;
+    }
+    header h1 {
+        font-family: "Playfair Display", serif; 
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 36px;
+    }
+    header nav li {
+        display: inline;
+        font-size: 20;  
+        margin-left: 16px;
+    } 
+    header nav li a {
+        text-decoration: none;
+        color: #485494;
+    }
+    header nav li a:hover {
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+   #seusonho .container{    
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 750px;
+    } 
+    #seusonho{
+        margin: 5px 0 ;
+        margin-top: 80px ;
+    }
+    #seusonho img {
+        max-width: 400px;
+        padding-top: 10px;
+    }
+
+    #form img {
+        width: 320px;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+    form input,
+    form textarea{
+        display: block;
+        width: 320px;
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+    form textarea {
+        resize: none;
+        height: 270px;
+        font-family: "Noto Sans", sans-serif;
+        font-style: italic;
+    }
+    input:focus, textarea:focus{
+        outline-color: #485494;
+        outline-width: 4px;
+    }
+    form button{
+        background-color: #485494;
+        color: #F2F0EB;
+        padding: 7px;
+        border: none; 
+        display: block;
+        cursor: pointer;
+    }
+    form button:hover{
+        text-decoration: underline;
+    }
+    
+
+    #about .container {
+        max-width: 15.9cm;
+        padding: 120px 0;
+        align-items: center;
+        text-align: end;
+        font-weight: 350;
+        font-size: medium;
+    }
+    
+
+    #feedsonhos .container{
+        text-align: end;
+        margin-bottom: 50px;
+    }
+    #feedsonhos img{
+        max-width: 1200px;
+        margin-bottom: 15px;
+    }
+    #feedsonhos .container a {
+        text-decoration: none;
+        color: #485494;
+    }
+
+
+
+    footer {
+        color: #F2F0EB;
+        background-color: #485494;
+        text-align: center;
+        padding: 5px;
+    }
