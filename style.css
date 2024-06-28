@@ -1,0 +1,83 @@
+body{
+    background-color: #B06094;
+    width: auto;
+    font-family:  "Inter", sans-serif; ;
+}
+
+#container-bloco{
+    background-color: #FFF7E3;
+    width: 70%;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 70px;
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+h1{
+    border-bottom: 2px dotted  black;
+    padding-bottom: 15px;
+    max-width: 95%;
+    margin: auto;
+    font-size: 25px;
+}
+
+
+li{
+    list-style-type: none; 
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+    
+}
+
+.custom-checkbox input{
+    display: none;
+}
+.custom-checkbox input+label::before{
+    content: '';
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    background-color: #FFF7E3;
+    border: 2px solid black;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+.custom-checkbox input:checked+label:before{
+    background-image:url("imagens/checked_creme.png");
+    background-size: 100%;
+    background-color: black;
+}
+.custom-checkbox input:checked+label{
+    text-decoration: line-through;
+    
+}
+
+
+#nova-tarefa input{
+    border-radius: none;
+    border: 1.5px black solid;  
+    margin: 0px;
+}
+#input-tarefa{
+    width: 70%;
+    padding-left: 7px;
+}
+#input-tarefa:focus-visible{
+border: 2px solid #080705;
+outline: 0;
+}
+
+#botao-adicionar{
+    background-color: black;
+    color: #FFF7E3;
+    margin: 0px;
+    cursor: pointer;
+}
