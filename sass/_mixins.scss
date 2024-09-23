@@ -1,0 +1,36 @@
+@use 'variaveis';
+
+@mixin reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin initial-position{
+    top: 0;
+    left: 0;
+}
+
+@mixin tablet{
+    .container {
+        max-width: 80%;
+    }
+    section .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+@mixin smartphone {    
+    section .products {
+        display: block;
+    }
+    section .products .product-item  {
+        margin-bottom: 32px;
+    }
+}

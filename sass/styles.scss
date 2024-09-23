@@ -1,0 +1,81 @@
+@use 'variaveis';
+@use 'mixins';
+
+
+*{
+    @include mixins.reset;
+    font-family: variaveis.$fonte;
+    list-style: none;
+}
+
+body{
+    background-color: variaveis.$cor-2; 
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: variaveis.$cor-1;
+    position: sticky;
+    @include mixins.initial-position;
+
+    .container{
+        @include mixins.flex-center;
+        padding: 16px 0;
+    }
+
+    .menu{
+        display: flex;
+        li{
+            font-weight: bold;
+            margin-left: 24px;
+        }
+        li a{
+            color: variaveis.$cor-2;
+            text-decoration: none;
+        }
+    }
+}
+
+section{
+    padding: 56px 0 ;
+
+    .products{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+
+        .product-item img {
+            width: 100%;
+            border-radius: 16px;
+        }
+        .product-button {
+            display: block;
+            background-color: variaveis.$cor-3;
+            color: variaveis.$cor-2;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+
+            &:hover{
+                background-color: variaveis.$cor-3-lighter;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    @include mixins.tablet;
+}
+@media screen and (max-width: 767px) {
+    @include mixins.smartphone;
+}
