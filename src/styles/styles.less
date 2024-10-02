@@ -1,0 +1,97 @@
+@import "variaveis.less";
+@import "mixins.less";
+@import "mapas.less";
+
+//escapings
+@breakpointMobile: ~"(max-width: 767px)"; 
+@breakpointTablet: ~"(min-width:768px) and (max-width: 1023px)"; 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fontePrincipal;
+}
+
+body{
+    background-color: #colors[backgrounColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    .centralizarHorizontal();
+}
+
+header {
+    background-color:  #colors[brandColor];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+    .menu {
+        display: flex;
+
+        li {
+            font-weight: bold;
+            margin-left: 24px;
+
+            a {
+                color: #colors[backgrounColor];
+                text-decoration: none;
+
+                &:hover{
+                    color: #colors[buttonColor];
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    .products {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+
+        &-item{
+            img{
+                width: 100%;
+                border-radius: 16px;
+            }
+        }
+        &-button{
+            display: block;
+            background-color: #colors[buttonColor];
+            border: solid 2px  #colors[buttonColor] ;
+            color:#colors[backgrounColor];
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: transparent;
+                color: #colors[buttonColor] ;
+            }
+        }
+    }
+}
+
